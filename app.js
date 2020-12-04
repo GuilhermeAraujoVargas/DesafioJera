@@ -10,7 +10,7 @@ function verificarStatus() {
     ++contadorPomodoro;
     clearInterval(tempoVar);
     btnIniciar.style.display = "block";
-    if (inputMinutos.value = 0 && inputSegundos.value == 0 && contadorPomodoro % 2 == 0) {
+    if (inputMinutos.value == 0 && inputSegundos.value == 0 && contadorPomodoro % 2 == 0) {
         inputMinutos.value = 5;
         inputMinutos.innerHTML = inputMinutos.value;
         inputSegundos.innerHTML = inputSegundos.value;
