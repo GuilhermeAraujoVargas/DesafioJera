@@ -40,21 +40,19 @@ function temporizador() {
     } else if (inputMinutos.value == 0 && inputSegundos.value == 0) {
         audio.play();
         verificarStatus();
-        if (audio.play()) {
             if (contadorPomodoro % 2 == 0) {
                 titulo.innerHTML = "Intervalo";
-                if (contadorPomodoro % 4 == 0 && contadorPomodoro / 2 >= 4) {
-                    alert("Hora do Descanso: que tal 10 minutinhos agora?");
-                } else {
-                    alert("Hora do Descanso! Relaxa um pouco...");
-                }
-                mostrarQtdePomodoro.innerHTML = contadorPomodoro / 2;
+            if (contadorPomodoro % 4 == 0 && contadorPomodoro / 2 >= 4) {
+                alert("Hora do Descanso: que tal 10 minutinhos agora?");
             } else {
-                titulo.innerHTML = "Pomodoro"
-                alert("Vamos iniciar mais um Pomodoro, animação!");
+                alert("Hora do Descanso! Relaxa um pouco...");
             }
+            mostrarQtdePomodoro.innerHTML = contadorPomodoro / 2;
+        } else {
+            titulo.innerHTML = "Pomodoro"
+            alert("Vamos iniciar mais um Pomodoro, animação!");
         }
-    }
+     }
 }
 
 //variável para controlar o temporizador e descanso em relação a sua progressão: se vai parar ou continuar
