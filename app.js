@@ -34,8 +34,11 @@ function temporizador() {
     }
 }
 
+//variável para controlar o temporizador e descanso em relação a sua progressão: se vai parar ou continuar
+let tempoVar;
 
 //botão para iniciar o temporizador/descanso
 btnIniciar.addEventListener("click", () => {
     temporizador();
+    tempoVar = setInterval("temporizador()", 1000);
 })
