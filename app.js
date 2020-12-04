@@ -6,6 +6,8 @@ let btnIniciar= document.querySelector(".btnIniciar");
 //variável para controle e contagem do pomodoro/descanso
 let contadorPomodoro = 1;
 
+let audio = document.querySelector(".alarme");
+
 function verificarStatus() {
     ++contadorPomodoro;
     clearInterval(tempoVar);
@@ -32,6 +34,7 @@ function temporizador() {
         inputSegundos.value--;
         inputSegundos.innerHTML = inputSegundos.value;  
     } else if (inputMinutos.value == 0 && inputSegundos.value == 0) {
+        audio.play();
         verificarStatus();
     }
 }
