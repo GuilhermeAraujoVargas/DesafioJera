@@ -8,7 +8,7 @@ let contadorPomodoro = 1;
 
 let audio = document.querySelector(".alarme");
 
-let mostrarQtdePomodoro = document.querySelector(".mostrarQtdePomodoro")
+let mostrarQtdePomodoro = document.querySelector(".mostrarQtdePomodoro");
 
 function verificarStatus() {
     ++contadorPomodoro;

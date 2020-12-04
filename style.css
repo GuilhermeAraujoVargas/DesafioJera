@@ -1,0 +1,55 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    margin-top: 10%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+}
+
+.mostrarQtdePomodoro {
+    font-size: 40px;
+    font-family: "Fredoka One", cursive;
+}
+
+.pomodoro input {
+    padding-top: 50px;
+    padding-left: 10px;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    outline: none;
+    border: none;
+    border-bottom: solid 3px dodgerblue;
+    font-size: 40px;
+    font-family: "Fredoka One", cursive;
+}
+
+.btnIniciar {
+    cursor: pointer;
+    width: 100px;
+    height: 30px;
+    background-color: transparent;
+    outline: none;
+    border: solid 2px dodgerblue;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+.btnIniciar:hover {
+    background-color: dodgerblue;
+    color: white;
+}
