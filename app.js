@@ -8,6 +8,8 @@ let contadorPomodoro = 1;
 
 let audio = document.querySelector(".alarme");
 
+let mostrarQtdePomodoro = document.querySelector(".mostrarQtdePomodoro")
+
 function verificarStatus() {
     ++contadorPomodoro;
     clearInterval(tempoVar);
@@ -42,6 +44,7 @@ function temporizador() {
             } else {
                 alert("Hora do Descanso! Relaxa um pouco...");
             }
+            mostrarQtdePomodoro.innerHTML = contadorPomodoro / 2;
         } else {
             alert("Vamos iniciar mais um Pomodoro, animação!");
         }
