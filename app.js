@@ -36,6 +36,15 @@ function temporizador() {
     } else if (inputMinutos.value == 0 && inputSegundos.value == 0) {
         audio.play();
         verificarStatus();
+        if (contadorPomodoro % 2 == 0) {
+            if (contadorPomodoro % 4 == 0 && contadorPomodoro / 2 >= 4) {
+                alert("Hora do Descanso: que tal 10 minutinhos agora?");
+            } else {
+                alert("Hora do Descanso! Relaxa um pouco...");
+            }
+        } else {
+            alert("Vamos iniciar mais um Pomodoro, animação!");
+        }
     }
 }
 
