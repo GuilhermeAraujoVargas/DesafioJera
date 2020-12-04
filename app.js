@@ -8,6 +8,8 @@ let contadorPomodoro = 1;
 
 function verificarStatus() {
     ++contadorPomodoro;
+    clearInterval(tempoVar);
+    btnIniciar.style.display = "block";
     if (inputMinutos.value = 0 && inputSegundos.value == 0 && contadorPomodoro % 2 == 0) {
         inputMinutos.value = 5;
         inputMinutos.innerHTML = inputMinutos.value;
@@ -41,4 +43,5 @@ let tempoVar;
 btnIniciar.addEventListener("click", () => {
     temporizador();
     tempoVar = setInterval("temporizador()", 1000);
+    btnIniciar.style.display = "none";
 })
