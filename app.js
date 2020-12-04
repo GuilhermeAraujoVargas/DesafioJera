@@ -10,6 +10,8 @@ let audio = document.querySelector(".alarme");
 
 let mostrarQtdePomodoro = document.querySelector(".mostrarQtdePomodoro");
 
+let titulo = document.querySelector(".titulo");
+
 function verificarStatus() {
     ++contadorPomodoro;
     clearInterval(tempoVar);
@@ -38,15 +40,19 @@ function temporizador() {
     } else if (inputMinutos.value == 0 && inputSegundos.value == 0) {
         audio.play();
         verificarStatus();
-        if (contadorPomodoro % 2 == 0) {
-            if (contadorPomodoro % 4 == 0 && contadorPomodoro / 2 >= 4) {
-                alert("Hora do Descanso: que tal 10 minutinhos agora?");
+        if (audio.play()) {
+            if (contadorPomodoro % 2 == 0) {
+                titulo.innerHTML = "Intervalo";
+                if (contadorPomodoro % 4 == 0 && contadorPomodoro / 2 >= 4) {
+                    alert("Hora do Descanso: que tal 10 minutinhos agora?");
+                } else {
+                    alert("Hora do Descanso! Relaxa um pouco...");
+                }
+                mostrarQtdePomodoro.innerHTML = contadorPomodoro / 2;
             } else {
-                alert("Hora do Descanso! Relaxa um pouco...");
+                titulo.innerHTML = "Pomodoro"
+                alert("Vamos iniciar mais um Pomodoro, animação!");
             }
-            mostrarQtdePomodoro.innerHTML = contadorPomodoro / 2;
-        } else {
-            alert("Vamos iniciar mais um Pomodoro, animação!");
         }
     }
 }
