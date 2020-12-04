@@ -6,7 +6,7 @@ let btnIniciar= document.querySelector(".btnIniciar");
 //variável para controle e contagem do pomodoro/descanso
 let contadorPomodoro = 1;
 
-let audio = document.querySelector(".alarme");
+let audio = new Audio("audio.mp3");
 
 let mostrarQtdePomodoro = document.querySelector(".mostrarQtdePomodoro");
 
